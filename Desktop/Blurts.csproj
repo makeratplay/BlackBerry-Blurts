@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{541EEF9E-4D47-49D2-BA2B-E871B0D6F915}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Blurts</RootNamespace>
+    <AssemblyName>Blurts</AssemblyName>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>FE554A81B3544C6C4D578D222E7AB5E14F6625F3</ManifestCertificateThumbprint>
+    <ManifestKeyFile>DesktopAlerts_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <SignManifests>true</SignManifests>
+    <ApplicationIcon>imgs\Blurts_64x64.ico</ApplicationIcon>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>ftp://ftp.mlhsoftware.com/Blurts/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>true</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://www.mlhsoftware.com/Blurts/</InstallUrl>
+    <SupportUrl>http://www.mlhsoftware.com/Blurts/help.html</SupportUrl>
+    <ProductName>Blurts</ProductName>
+    <PublisherName>MLH Software</PublisherName>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="InTheHand.Net.Personal, Version=2.3.0.0, Culture=neutral, PublicKeyToken=ea38caa273134499, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\Actions\ActionBase.cs" />
+    <Compile Include="Domain\AlertMsgs\DisconnectAlert.cs" />
+    <Compile Include="Domain\Actions\PhoneNumberAction.cs" />
+    <Compile Include="Domain\AlertHistory.cs" />
+    <Compile Include="Domain\IDisplayItem.cs" />
+    <Compile Include="UserInterface\AboutDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\AboutDlg.Designer.cs">
+      <DependentUpon>AboutDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\AlertMsgs\AlertBase.cs" />
+    <Compile Include="Domain\CmdMsgs\BuzzCmd.cs" />
+    <Compile Include="Domain\AlertMsgs\CallAlert.cs" />
+    <Compile Include="Domain\CmdMsgs\CallCmd.cs" />
+    <Compile Include="Domain\AlertMsgs\ClipBoardAlert.cs" />
+    <Compile Include="Domain\CmdMsgs\CmdBase.cs" />
+    <Compile Include="Domain\AlertMsgs\ConnectAlert.cs" />
+    <Compile Include="Domain\AlertMsgs\ContactAlert.cs" />
+    <Compile Include="Domain\CmdMsgs\ContactCmd.cs" />
+    <Compile Include="Domain\CmdMsgs\CreateContactCmd.cs" />
+    <Compile Include="Domain\AlertMsgs\DisplayMsg.cs" />
+    <Compile Include="Domain\CmdMsgs\DTMFCmd.cs" />
+    <Compile Include="Domain\AlertMsgs\EmailAlert.cs" />
+    <Compile Include="Domain\AlertMsgs\InputAlert.cs" />
+    <Compile Include="Domain\AlertMsgs\LevelAlert.cs" />
+    <Compile Include="Domain\CmdMsgs\LevelCmd.cs" />
+    <Compile Include="Domain\AlertMsgs\LockAlert.cs" />
+    <Compile Include="Domain\AlertMsgs\MacroAlert.cs" />
+    <Compile Include="Domain\AlertMsgs\PINMsgAlert.cs" />
+    <Compile Include="Domain\CmdMsgs\PressKeyCmd.cs" />
+    <Compile Include="Domain\CmdMsgs\ReadClipboardCmd.cs" />
+    <Compile Include="Domain\AlertMsgs\ReadFileAlert.cs" />
+    <Compile Include="Domain\CmdMsgs\ReadFileCmd.cs" />
+    <Compile Include="Domain\AlertMsgs\ScreenCaptureAlert.cs" />
+    <Compile Include="Domain\CmdMsgs\ScreenCaptureCmd.cs" />
+    <Compile Include="Domain\AlertMsgs\SMSAlert.cs" />
+    <Compile Include="Domain\CmdMsgs\SMSCmd.cs" />
+    <Compile Include="Domain\AlertMsgs\StatusAlert.cs" />
+    <Compile Include="Domain\CmdMsgs\WriteClipboardCmd.cs" />
+    <Compile Include="Domain\ApplicationSettings.cs" />
+    <Compile Include="Domain\BTConnection.cs" />
+    <Compile Include="UserInterface\BuyDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\BuyDlg.Designer.cs">
+      <DependentUpon>BuyDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\CallStatusDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\CallStatusDlg.Designer.cs">
+      <DependentUpon>CallStatusDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\CommandDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\CommandDlg.Designer.cs">
+      <DependentUpon>CommandDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\ContactDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ContactDlg.Designer.cs">
+      <DependentUpon>ContactDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Contacts.cs" />
+    <Compile Include="Domain\Device.cs" />
+    <Compile Include="UserInterface\Controls\BatteryLevelCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\Controls\BatteryLevelCtrl.Designer.cs">
+      <DependentUpon>BatteryLevelCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\Controls\SignalLevelCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\Controls\SignalLevelCtrl.Designer.cs">
+      <DependentUpon>SignalLevelCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\DialDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\DialDlg.Designer.cs">
+      <DependentUpon>DialDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\DeviceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\DeviceList.Designer.cs">
+      <DependentUpon>DeviceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\AlertScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\AlertScreen.Designer.cs">
+      <DependentUpon>AlertScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Hotkey.cs" />
+    <Compile Include="Domain\HotKeysManager.cs" />
+    <Compile Include="Domain\json\JSONArray.cs" />
+    <Compile Include="Domain\json\JSONException.cs" />
+    <Compile Include="Domain\json\JSONObject.cs" />
+    <Compile Include="Domain\json\JSONString.cs" />
+    <Compile Include="Domain\json\JSONTokener.cs" />
+    <Compile Include="UserInterface\KeyboardDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\KeyboardDlg.Designer.cs">
+      <DependentUpon>KeyboardDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\NoBluetoothDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\NoBluetoothDlg.Designer.cs">
+      <DependentUpon>NoBluetoothDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UserInterface\AboutDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\BuyDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BuyDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\CallStatusDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CallStatusDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\CommandDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CommandDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\ContactDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ContactDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\Controls\BatteryLevelCtrl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BatteryLevelCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\Controls\SignalLevelCtrl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SignalLevelCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\DialDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DialDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\DeviceList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DeviceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\AlertScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AlertScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\KeyboardDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>KeyboardDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\NoBluetoothDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NoBluetoothDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\MainScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SetupForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SMSContactDlg.resx">
+      <DependentUpon>SMSContactDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SMSDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SMSDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\Toolbar.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Toolbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="UserInterface\MainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\MainScreen.Designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UserInterface\SetupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SetupForm.Designer.cs">
+      <DependentUpon>SetupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SMSContactDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SMSContactDlg.Designer.cs">
+      <DependentUpon>SMSContactDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SMSDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SMSDlg.Designer.cs">
+      <DependentUpon>SMSDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\Toolbar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\Toolbar.Designer.cs">
+      <DependentUpon>Toolbar.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\disconnected.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DesktopAlerts_TemporaryKey.pfx" />
+    <Content Include="imgs\icon.ico" />
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imgs\blue1.ico" />
+    <Content Include="imgs\blue1_32x32.ico" />
+    <Content Include="imgs\blue1_64x64.png" />
+    <None Include="Domain\DomainClassDiagram.cd" />
+    <None Include="imgs\Clipbaord.png" />
+    <None Include="imgs\Blurts_35x35.png" />
+    <Content Include="imgs\Blurts_64x64.ico" />
+    <None Include="imgs\Blurts_64x64.png" />
+    <Content Include="imgs\close.png" />
+    <Content Include="imgs\close_sel.png" />
+    <Content Include="UserInterface\XSLT\contacts.xslt" />
+    <Content Include="UserInterface\XSLT\display.xslt" />
+    <None Include="Resources\Blurts_red_64x64.png" />
+    <None Include="imgs\addressbook_btn_sm.png" />
+    <None Include="imgs\screenCaptureBtn_sm.png" />
+    <None Include="imgs\keyboard_btn_sm.png" />
+    <None Include="imgs\clipboardSendBtn_sm.png" />
+    <None Include="imgs\clipboardGetBtn_sm.png" />
+    <None Include="imgs\email_btn_sm.png" />
+    <None Include="imgs\smsBtn_sm.png" />
+    <None Include="imgs\phoneBtn_sm.png" />
+    <None Include="imgs\home_btn_sm.png" />
+    <None Include="imgs\callStatusSmBackground.png" />
+    <None Include="imgs\callStatusBackground.png" />
+    <None Include="imgs\sendBtn_sel.png" />
+    <None Include="imgs\muteBtn_sel.png" />
+    <None Include="imgs\callEndBtn_sel.png" />
+    <None Include="imgs\volumeUpBtn_sel.png" />
+    <None Include="imgs\volumeDownBtn_sel.png" />
+    <None Include="imgs\speakerPhoneBtn_sel.png" />
+    <None Include="imgs\showKeypadBtn_sel.png" />
+    <None Include="imgs\volumeDownBtn.png" />
+    <None Include="imgs\volumeUpBtn.png" />
+    <None Include="imgs\muteBtn.png" />
+    <None Include="imgs\speakerPhoneBtn.png" />
+    <None Include="imgs\showKeypadBtn.png" />
+    <None Include="imgs\9key_sel.png" />
+    <None Include="imgs\8key_sel.png" />
+    <None Include="imgs\6key_sel.png" />
+    <None Include="imgs\5key_sel.png" />
+    <None Include="imgs\3key_sel.png" />
+    <None Include="imgs\2key_sel.png" />
+    <None Include="imgs\0key_sel.png" />
+    <None Include="imgs\poundkey_sel.png" />
+    <None Include="imgs\Starkey_sel.png" />
+    <None Include="imgs\7key_sel.png" />
+    <None Include="imgs\4key_sel.png" />
+    <None Include="imgs\1key_sel.png" />
+    <None Include="imgs\keybaord_3.png" />
+    <None Include="imgs\keybaord_2_sel.png" />
+    <None Include="imgs\keybaord_2.png" />
+    <None Include="imgs\keybaord_3_sel.png" />
+    <None Include="imgs\keybaord_1.png" />
+    <None Include="imgs\keybaord_1_sel.png" />
+    <None Include="imgs\toolbarBackground_sm.png" />
+    <None Include="imgs\clipboardGetBtn.png" />
+    <None Include="imgs\clipboardSendBtn.png" />
+    <None Include="imgs\maximize_Btn.png" />
+    <None Include="imgs\maximize_Btn_focus.png" />
+    <None Include="imgs\minimizeBtn_focus.png" />
+    <None Include="imgs\close_Btn.png" />
+    <None Include="imgs\close_Btn_focus.png" />
+    <None Include="imgs\minimizeBtn.png" />
+    <None Include="imgs\poundkey.png" />
+    <None Include="imgs\9key.png" />
+    <None Include="imgs\6key.png" />
+    <None Include="imgs\3key.png" />
+    <None Include="imgs\0key.png" />
+    <None Include="imgs\8key.png" />
+    <None Include="imgs\5key.png" />
+    <None Include="imgs\2key.png" />
+    <None Include="imgs\Starkey.png" />
+    <None Include="imgs\7key.png" />
+    <None Include="imgs\4key.png" />
+    <None Include="imgs\1key.png" />
+    <None Include="imgs\smsBackground.png" />
+    <None Include="imgs\callEndBtn.png" />
+    <None Include="imgs\sendBtn.png" />
+    <None Include="imgs\goBtn.png" />
+    <None Include="imgs\toolbarBackground2.png" />
+    <None Include="imgs\signal0.png" />
+    <None Include="imgs\signal1.png" />
+    <None Include="imgs\signal2.png" />
+    <None Include="imgs\signal3.png" />
+    <None Include="imgs\signal4.png" />
+    <None Include="imgs\signal5.png" />
+    <None Include="imgs\battery0.png" />
+    <None Include="imgs\battery1.png" />
+    <None Include="imgs\battery2.png" />
+    <None Include="imgs\battery3.png" />
+    <None Include="imgs\battery4.png" />
+    <None Include="imgs\battery5.png" />
+    <None Include="imgs\dailBackground.png" />
+    <None Include="imgs\clipboardBtn.png" />
+    <None Include="imgs\screenCaptureBtn.png" />
+    <None Include="imgs\smsBtn.png" />
+    <None Include="imgs\phoneBtn.png" />
+    <None Include="imgs\closeBtn.png" />
+    <None Include="imgs\toolbarBackground.png" />
+    <None Include="imgs\pausedIcon.ico" />
+    <None Include="UserInterface\icon_msg.ico" />
+    <None Include="UserInterface\UIClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MSScriptControl">
+      <Guid>{0E59F1D2-1FBE-11D0-8FF2-00A0D10038BC}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Segoe UI" Size="9" />
+  <Class Name="Blurts.AlertBase" Collapsed="true">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Domain\AlertMsgs\AlertBase.cs</FileName>
+      <HashCode>oAlAEAA0CAggAELEAHEhAjkAGATEBCBIGkCAgAQACgE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Blurts.StatusAlert" Collapsed="true">
+    <Position X="8.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Domain\AlertMsgs\StatusAlert.cs</FileName>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAACACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blurts.DisconnectAlert" Collapsed="true">
+    <Position X="4" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Domain\AlertMsgs\DisconnectAlert.cs</FileName>
+      <HashCode>QAAAAAAAAAAAAAEAAAAAAAAAQAAEAIAAAECCCAEAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blurts.PhoneNumberAction" Collapsed="true">
+    <Position X="6.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Domain\Actions\PhoneNumberAction.cs</FileName>
+      <HashCode>AgAAAAAAAAAAkAAAAAAAQAAAAEAEAAAAAACAAAAEAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blurts.CallAlert" Collapsed="true">
+    <Position X="10.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Domain\AlertMsgs\CallAlert.cs</FileName>
+      <HashCode>AgAAAAAAAAAC0AgAAAAAQACAAAAEYAAAAACAQgAFAAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blurts.ClipboardAlert" Collapsed="true">
+    <Position X="13" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Domain\AlertMsgs\ClipBoardAlert.cs</FileName>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAEAAAAAACACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blurts.ConnectAlert" Collapsed="true">
+    <Position X="15.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Domain\AlertMsgs\ConnectAlert.cs</FileName>
+      <HashCode>QAAAAAAAAAAAAAEAAAAAAAAAQAAEAIAAAECCCAEAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blurts.ContactAlert" Collapsed="true">
+    <Position X="17.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Domain\AlertMsgs\ContactAlert.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAgAESAAAAAHAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blurts.EmailAlert" Collapsed="true">
+    <Position X="19.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Domain\AlertMsgs\EmailAlert.cs</FileName>
+      <HashCode>AAAAWAAAAAQAAAAAAIAAAAAAAAAEAAIAQACAAQAgQAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blurts.InputAlert" Collapsed="true">
+    <Position X="22" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Domain\AlertMsgs\InputAlert.cs</FileName>
+      <HashCode>IBgAAAAgAAQAAAAAEAAIAFAACAAkIgACAQDAAAAADoQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blurts.LevelAlert" Collapsed="true">
+    <Position X="24.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Domain\AlertMsgs\LevelAlert.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAACAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blurts.LockAlert" Collapsed="true">
+    <Position X="26.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Domain\AlertMsgs\LockAlert.cs</FileName>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAACACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blurts.MacroAlert" Collapsed="true">
+    <Position X="28.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Domain\AlertMsgs\MacroAlert.cs</FileName>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAhAAAAAEAAAAAACACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blurts.PINMsgAlert" Collapsed="true">
+    <Position X="31" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Domain\AlertMsgs\PINMsgAlert.cs</FileName>
+      <HashCode>AAAAWAAAAAQAAAAAAIAAAAAAAAAEAAIAQACAAQAgQAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blurts.ReadFileAlert" Collapsed="true">
+    <Position X="33.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Domain\AlertMsgs\ReadFileAlert.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAACAAABAAEA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blurts.ScreenCaptureAlert" Collapsed="true">
+    <Position X="35.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Domain\AlertMsgs\ScreenCaptureAlert.cs</FileName>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAIAAAAAEAAAAAACAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blurts.SMSAlert" Collapsed="true">
+    <Position X="37.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Domain\AlertMsgs\SMSAlert.cs</FileName>
+      <HashCode>AgAAGAAAAAQAAAAAAAAAQAAAAAAEAAAAQACAAQAgAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Blurts.Domain.IDisplayItem">
+    <Position X="1.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Domain\IDisplayItem.cs</FileName>
+      <HashCode>AAEAEAAkAAgAAEBEAEEgACgAGAAAAAAIEAAAAAAAAgA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+</ClassDiagram>
